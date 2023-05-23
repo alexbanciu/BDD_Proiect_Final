@@ -7,5 +7,5 @@ from selenium.webdriver.support import expected_conditions as EC
 class BasePage(Browser):
 
     def wait_and_click_element(self, selector):
-        WebDriverWait(self.chrome, 5).until(EC.presence_of_element_located(*selector))
+        WebDriverWait(self.chrome, 10).until(EC.presence_of_element_located(*selector))
         self.chrome.find_element(*selector).click()
