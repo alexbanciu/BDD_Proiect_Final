@@ -1,4 +1,4 @@
-Feature: Test the search functionality in the homepage of amazon
+Feature: Test the functionality of Amazon's page
 
   Background:
     Given Home page: I am on amazon homepage
