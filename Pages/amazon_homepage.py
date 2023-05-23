@@ -9,7 +9,6 @@ class HomePage(BasePage):
     SEARCH_CATEGORIES = (By.ID, 'searchDropdownBox')
     SEARCH_RESULTS = (By.XPATH, '//*[@id="search"]/span/div/h1/div/div[1]/div/div/span[1]')
     ADVANCED_SEARCH_LINK = (By.LINK_TEXT, "Today's Deals")
-    # ADVANCED_SEARCH_LINK = (By.LINK_TEXT, 'Advanced')
 
     def navigate_to_homepage(self):
         self.chrome.get("https://www.amazon.com/")

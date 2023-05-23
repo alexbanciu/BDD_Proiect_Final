@@ -13,7 +13,7 @@ def step_impl(context):
 
 @when("sign_up: I enter my email")
 def step_impl(context):
-    context.sign_up_page_object.insert_email("alexandruioanbanciu")
+    context.sign_up_page_object.insert_email("alexandruioanbanciu@gmail.com")
 
 
 @when("sign_up: I send the password")

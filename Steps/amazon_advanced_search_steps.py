@@ -21,6 +21,6 @@ def step_impl(context):
     context.advanced_search_object.select_discount()
 
 
-@then("Today's Deals: I should be able to click on the first result of the customized search")
+@then("Today's Deals: I should be able to remove or modify any applied search filters easily")
 def step_impl(context):
     context.advanced_search_object.select_first_product()

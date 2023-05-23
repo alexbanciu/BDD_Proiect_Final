@@ -40,9 +40,11 @@ Feature: Test the search functionality in the homepage of amazon
     When Today's Deals: I choose the price
     When Today's Deals: I select average customer review rating
     When Today's Deals: I select the Discount that I want
-    Then Today's Deals: I should be able to click on the first result of the customized search
+    Then Today's Deals: I should be able to remove or modify any applied search filters easily
 
-  Scenario: I check the sign up functionality
+
+    @T3 @functional @BDD
+  Scenario: I check the sign up error message functionality
     When sign_up: I click on sign up button
     When sign_up: I send my full name
     When sign_up: I enter my email
