@@ -3,11 +3,11 @@ from Pages.base_page import BasePage
 
 
 class AdvancedSearchPage(BasePage):
-    SELECT_DEPARTMENTS = (By.XPATH, '//*[@id="grid-main-container"]/div[2]/span[3]/ul/li[14]/label/span')
-    SELECT_PRICE = (By.XPATH, '//*[@id="grid-main-container"]/div[2]/span[5]/ul/li[5]/div/a/span')
-    SELECT_REVIEW_RATING = (By.XPATH, '//*[@id="grid-main-container"]/div[2]/span[7]/ul/li[1]/div/a/span/span/span')
-    SELECT_DISCOUNT = (By.XPATH, '//*[@id="grid-main-container"]/div[2]/span[6]/ul/li[2]/div/a/span')
-    CLEAR_BUTTON = (By.XPATH, '//*[@id="grid-main-container"]/div[2]/span[3]/li/a')
+    SELECT_DEPARTMENTS = (By.XPATH, "(//span[text()='Computers & Accessories'])[2]")
+    SELECT_PRICE = (By.XPATH, "//span[text()='$100 to $200']")
+    SELECT_REVIEW_RATING = (By.XPATH, "(//span[@role='text'])[1]")
+    SELECT_DISCOUNT = (By.XPATH, "//span[text()='10% off or more']")
+    CLEAR_BUTTON = (By.XPATH, "//li[@data-csa-c-element-id='filter-department-all']//a[1]")
 
     def select_departments(self):
         self.chrome.find_element(*self.SELECT_DEPARTMENTS).click()

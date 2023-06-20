@@ -7,7 +7,7 @@ class HomePage(BasePage):
     SEARCH_TEXTBOX = (By.ID, 'twotabsearchtextbox')
     SEARCH_BUTTON = (By.ID, 'nav-search-submit-button')
     SEARCH_CATEGORIES = (By.ID, 'searchDropdownBox')
-    SEARCH_RESULTS = (By.XPATH, '//*[@id="search"]/span/div/h1/div/div[1]/div/div/span[1]')
+    SEARCH_RESULTS = (By.XPATH, "(//div[contains(@class,'a-section a-spacing-small')]//span)[1]")
     ADVANCED_SEARCH_LINK = (By.LINK_TEXT, "Today's Deals")
 
     def navigate_to_homepage(self):
