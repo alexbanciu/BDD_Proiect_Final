@@ -1,3 +1,4 @@
+from Pages.amazon_music_page import AmazonMusic
 from Pages.amazon_sign_up_page import SignUpPage
 from browser import Browser
 from Pages.amazon_homepage import HomePage
@@ -9,6 +10,7 @@ def before_all(context):
     context.home_page_object = HomePage()
     context.advanced_search_object = AdvancedSearchPage()
     context.sign_up_page_object = SignUpPage()
+    context.amazon_music_object = AmazonMusic()
 
 
 def after_all(context):
