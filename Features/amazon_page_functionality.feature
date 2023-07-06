@@ -54,10 +54,10 @@ Feature: Test the functionality of Amazon's page
     Then sing_up: I should receive the message: Passwords must match
 
   @T4 @functional @BDD
-  Scenario: Check that the user can access Amazons's free streaming music
+  Scenario: Check that the user can be redirected to Amazon free streaming music
     When Home page: I click on All button from top menu
     When Home page: I click on Amazon Music
     When Home page: I choose Free Streaming Music from the menu
     When Amazon music page: I click on listen now button
-    When Amazon streaming music: I should be redirected to Amazon streaming music page
+    Then Amazon streaming music: I should be redirected to Amazon streaming music page
     Then Home page: I should return to the home page

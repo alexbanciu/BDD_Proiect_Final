@@ -21,7 +21,7 @@ def step_impl(context):
     context.amazon_music_object.click_listen_now_button()
 
 
-@when('Amazon streaming music: I should be redirected to Amazon streaming music page')
+@then('Amazon streaming music: I should be redirected to Amazon streaming music page')
 def step_impl(context):
     context.amazon_music_object.verify_redirected_link()
 
