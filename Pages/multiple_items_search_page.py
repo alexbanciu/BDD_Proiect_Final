@@ -9,5 +9,5 @@ class MultipleItemsSearch(BasePage):
     def search_item(self, item):
         self.chrome.find_element(*self.SEARCH_INPUT).send_keys(item)
 
-    def click_search_button(self):
+    def click_search_button2(self):
         self.chrome.find_element(*self.SEARCH_BUTTON2).click()
