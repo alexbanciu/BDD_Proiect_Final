@@ -53,6 +53,15 @@ Feature: Test the functionality of Amazon's page
     When sign_up: I submit my personal info by clicking verify email
     Then sing_up: I should receive the message: Passwords must match
 
+    Scenario Outline: Verify search results for multiple items
+    When I search for the following "<items>":
+    Then I should see search results for each item
+    Examples:
+      | items      |
+      | Laptop     |
+      | Headphones |
+      | Smartphone |
+
   @T4 @functional @BDD
   Scenario: Check that the user can be redirected to Amazon free streaming music
     When Home page: I click on All button from top menu

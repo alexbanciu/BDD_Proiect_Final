@@ -25,7 +25,7 @@ class AmazonMusic(BasePage):
         current_url = self.chrome.current_url
         expected_url = "https://music.amazon.com/?ref=dm_lnd_nw_listn_e909a690_nav_em__dm_nav_nw_0_2_2_3"
 
-        if expected_url != current_url:
+        if expected_url != current_url and expected_url == expected_url:
             print("User is redirected to the expected Amazon Streaming Music page")
         else:
             raise AssertionError(f"Expected redirection to '{expected_url}', but got '{current_url}'")
