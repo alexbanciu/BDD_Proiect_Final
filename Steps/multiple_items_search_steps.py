@@ -1,4 +1,7 @@
-from telnetlib import EC
+from behave import then
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.wait import WebDriverWait
 
 from behave import *
 from time import sleep
@@ -15,3 +18,5 @@ def step_impl(context, items):
 
 @then('I should see search results for each item')
 def step_impl(context):
+    items = [row['items'] for row in context.table]
+    context.multiple_items_search_object.verify_search_results(items)
