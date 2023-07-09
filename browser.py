@@ -5,7 +5,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 class Browser:
     chrome = webdriver.Chrome(executable_path=ChromeDriverManager().install())
     chrome.maximize_window()
-    chrome.implicitly_wait(3)
+    chrome.implicitly_wait(7)
 
     def close(self):
         self.chrome.delete_all_cookies()

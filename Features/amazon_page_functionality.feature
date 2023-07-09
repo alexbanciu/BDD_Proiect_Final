@@ -53,14 +53,10 @@ Feature: Test the functionality of Amazon's page
     When sign_up: I submit my personal info by clicking verify email
     Then sing_up: I should receive the message: Passwords must match
 
-    Scenario Outline: Verify search results for multiple items
-    When I search for the following "<items>":
-    Then I should see search results for each item
-    Examples:
-      | items      |
-      | Laptop     |
-      | Headphones |
-      | Smartphone |
+    Scenario: Filter search results by price range
+  When I search for "headphones"
+  And I apply a filter for a price range of $50 to $100
+  Then If the filter was applied I should be able to see the icon to close that price filter
 
   @T4 @functional @BDD
   Scenario: Check that the user can be redirected to Amazon free streaming music
