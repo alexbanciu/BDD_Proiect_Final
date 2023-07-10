@@ -1,3 +1,4 @@
+from Pages.add_to_cart_page import CartPage
 from Pages.amazon_music_page import AmazonMusic
 from Pages.amazon_sign_up_page import SignUpPage
 from Pages.price_range_page import PriceRangeFilter
@@ -16,6 +17,7 @@ def before_all(context):
     context.price_range_object = PriceRangeFilter()
     context.homepage_elements_object = PriceRangeFilter()
     context.sign_in_object = SignInPage()
+    context.add_to_cart_object = CartPage()
 
 
 def after_all(context):

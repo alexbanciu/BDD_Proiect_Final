@@ -40,14 +40,23 @@ Feature: Test the functionality of Amazon's page
     When Sign In page: I send email and password
     Then  I should get back to amazon homepage
 
-  @T2 @functional @BDD
-  Scenario:  Check that the user can make an advanced search for a product in Today's Deals topic
-    When Home page: When I click on the Today's Deals
-    When Today's Deals: I select Computers & Accessories department
-    When Today's Deals: I choose the price
-    When Today's Deals: I select average customer review rating
-    When Today's Deals: I select the Discount that I want
-    Then Today's Deals: I should be able to remove or modify any applied search filters easily
+
+  Scenario: Verify if there is at least one product in the cart
+    When Main Page: I type "iphone"
+    Then Search results page: I select the first iphone from the search results
+    When Cart page: I click on Add to Cart
+    Then Cart page: I should see at least one item in the cart
+
+
+
+#  @T2 @functional @BDD
+#  Scenario:  Check that the user can make an advanced search for a product in Today's Deals topic
+#    When Home page: When I click on the Today's Deals
+#    When Today's Deals: I select Computers & Accessories department
+#    When Today's Deals: I choose the price
+#    When Today's Deals: I select average customer review rating
+#    When Today's Deals: I select the Discount that I want
+#    Then Today's Deals: I should be able to remove or modify any applied search filters easily
 #
 #
 #  @T3 @functional @BDD
