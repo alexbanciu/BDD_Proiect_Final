@@ -1,6 +1,7 @@
 from Pages.add_to_cart_page import CartPage
 from Pages.amazon_music_page import AmazonMusic
 from Pages.amazon_sign_up_page import SignUpPage
+from Pages.currency_page import CurrencyPage
 from Pages.price_range_page import PriceRangeFilter
 from Pages.sign_in_page import SignInPage
 from browser import Browser
@@ -18,6 +19,7 @@ def before_all(context):
     context.homepage_elements_object = PriceRangeFilter()
     context.sign_in_object = SignInPage()
     context.add_to_cart_object = CartPage()
+    context.currency_page_object = CurrencyPage()
 
 
 def after_all(context):

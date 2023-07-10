@@ -8,7 +8,7 @@ def step_impl(context, cart_item):
     context.add_to_cart_object.perform_search(cart_item)
 
 
-@then("Search results page: I select the first iphone from the search results")
+@then("Search results page: I select the any iphone from the search results")
 def step_impl(context):
     context.add_to_cart_object.select_first_product()
 

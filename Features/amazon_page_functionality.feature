@@ -43,9 +43,15 @@ Feature: Test the functionality of Amazon's page
 
   Scenario: Verify if there is at least one product in the cart
     When Main Page: I type "iphone"
-    Then Search results page: I select the first iphone from the search results
+    Then Search results page: I select the any iphone from the search results
     When Cart page: I click on Add to Cart
     Then Cart page: I should see at least one item in the cart
+
+
+  Scenario: Change Currency from Dollar to Euro
+    When Home page: I click on the currency dropdown
+    When Home page: I select the currency as Euro
+    Then Home page: The currency should be changed to EUR
 
 
 
