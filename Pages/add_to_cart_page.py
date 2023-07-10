@@ -11,6 +11,7 @@ class CartPage(Browser):
     ADD_TO_CART_BUTTON = (By.ID, "add-to-cart-button")
     CART_ITEM_COUNT = (By.ID, "nav-cart-count")
     GO_TO_CART = (By.XPATH, "//a[@href='/cart?ref_=sw_gtc']")
+    DELETE_FROM_CART =(By.XPATH, "//input[@name='submit.delete.fe7c6bc7-b6bd-4951-8ae7-5007f2feb00c']")
 
     def perform_search(self, cart_item):
         search_box = self.chrome.find_element(*self.SEARCH_TEXTBOX)
