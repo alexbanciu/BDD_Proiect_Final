@@ -1,7 +1,7 @@
 import self as self
 from selenium.webdriver.common.by import By
 from browser import Browser
-from time import sleep
+
 
 
 class SignInPage(Browser):
@@ -27,4 +27,3 @@ class SignInPage(Browser):
 
     def return_to_page(self):
         self.chrome.get('https://www.amazon.com/')
-        sleep(3)

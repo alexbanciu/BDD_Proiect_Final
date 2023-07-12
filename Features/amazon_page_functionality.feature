@@ -59,7 +59,7 @@ Feature: Test the functionality of Amazon's page
 
   @T6
   Scenario: Verify Page Title is Displayed
-    Then Home page: The page title should be displayed
+    Then Home page: The page title "Amazon" should be displayed
 
   @T7
   Scenario:  Check that the user can make an advanced search for a product in Today's Deals topic
