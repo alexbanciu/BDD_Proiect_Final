@@ -16,3 +16,7 @@ class CurrencyPage(Browser):
 
     def get_selected_currency(self):
         return self.chrome.find_element(*self.SELECTED_CURRENCY).text
+
+    def assert_currency_is_euro(self):
+        selected_currency = self.get_selected_currency()
+        assert selected_currency == " - Euro"
